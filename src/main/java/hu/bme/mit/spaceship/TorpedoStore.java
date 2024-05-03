@@ -26,6 +26,8 @@ public class TorpedoStore {
         FAILURE_RATE = Double.parseDouble(failureEnv);
       } catch (NumberFormatException nfe) {
         FAILURE_RATE = 0.0;
+
+
       }
     }
   }
@@ -41,6 +43,8 @@ public class TorpedoStore {
     
     double r = generator.nextDouble();
 
+
+    
     if (r >= FAILURE_RATE) {
       // successful firing
       this.torpedoCount = torpedoCount - numberOfTorpedos;
